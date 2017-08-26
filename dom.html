@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="div111" data-one="666">
+
+    </div>
+</body>
+
+</html>
+<script src="./js/lib/jquery-2.1.4.js">
+</script>
+<script>
+    // var div = document.querySelector('.div');
+    // console.log(div.dataset['one'])
+
+
+    //去除空格  type 1-所有空格  2-前后空格  3-前空格 4-后空格
+    //     function trim(str, type) {
+
+    //         switch (type) {
+    //             case 1:            
+    //                 return str.replace(/\s+/g, "");
+    //             case 2:
+    //                 return str.replace(/(^\s*)|(\s*$)/g, "");
+    //             case 3:
+    //                 return str.replace(/(^\s*)/g, "");
+    //             case 4:
+    //                 return str.replace(/(\s*$)/g, "");
+    //             default:
+    //                 return str;
+    //         }
+    //     }
+    //     var str=' akjsdl  kg '    
+    //   var num=  trim(str,1)
+    //     console.log(num)
+
+    // var str='111';
+    // var one=str.concat('222','333','4344')
+    // console.log(one)
+
+    // 课后作业：已知字符串："id=666; PHPSESSID=c993fp0r0eu9c8pp7esdmr1oq5"，封装一个函数，获取指定的键值
+    // document.cookie = "name=666";
+    // document.cookie = "age=18"
+    // document.cookie = "id=ccccc";
+    // console.log(document.cookie);
+    // function getCookie(key){
+    //实现方法1:
+    //    var reg=new RegExp("^"+key+"=");
+    //    console.log(reg)
+    //     var str = document.cookie;
+    //     var arr = str.split("; ");
+    //     arr.forEach(function(data){
+    //         if(reg.test(data)){
+    //             str = data.replace(key+"=","")
+    //             console.log(str);
+    //             return;
+    //     }
+    //     });
+
+
+    //实现方法2:
+    // var str = '{"'+document.cookie+'"}';
+    // // console.log(str)
+    // str  = str.replace(/;\s/g,'","');
+    // str = str.replace(/=/g,'":"');
+    // console.log(str);
+    // var obj = JSON.parse(str);
+    // console.log(obj[key]); 
+
+
+
+
+    // }
+    // getCookie("name");
+
+    // var str = 'id=666;PHPSESSID=c993fp0r0eu9c8pp7esdmr1oq5';
+    //     function getStr(k){
+    //         var key=str.replace(/=/g,'":"');
+    //         var newkey=key.replace(';','","')
+    //         var jsonStr='{"'+newkey+'"}'
+    //         var json=JSON.parse(jsonStr)
+    //         console.log(json[k])
+    //     }
+    //     getStr('PHPSESSID')
+
+
+/**
+ * 获取对应键的值
+ * @param {键} key
+ * @param {数据} data
+ */
+// function getKeyValForCookie(key, data) {
+//     return decodeURIComponent(JSON.parse("{\"" + data.split("=").join("\": \"").split("; ").join("\", \"") + "\"}")[key]);
+// }
+
+//   var $div=  $('div').attr('class')
+
+//   console.log($div)
+
+//   var data=$('div').attr('data-one')
+//   console.log(data)
+
+var arr=['1','2','3']
+
+arr.forEach(function(key,index){
+    console.log(index)
+})
+
+</script>

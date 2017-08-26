@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    li{
+        height: 20px;
+       
+    }
+    .current{
+        color: red;
+    }
+    </style>
+</head>
+<body>
+    <ul>
+        <li data-name="123">111111</li>
+        <li>111111</li>
+        <li>111111</li>
+        <li>111111</li>
+        <li>111111</li>
+        <input type="hidden" name="" value="">
+    </ul>
+</body>
+</html>
+<script src="./js/lib/jquery-2.1.4.js"></script>
+<script>
+    var str='12345'
+    var arr=str.split(',')
+    console.log(arr)
+    var arr2=[1,2,34,5]
+    var join=arr2.join('|')
+    console.log(join)
+  console.log ( Object.prototype.toString.call(join))
+//   var lis=document.querySelectorAll('li');
+//   lis.forEach(function(v) {
+//      v.style.backgroundColor='red'
+//   },this);
+$('ul').on('click','li',function(){
+    
+})
+       
+</script>

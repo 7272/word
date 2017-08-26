@@ -1,0 +1,59 @@
+<div>
+    <ol class="breadcrumb">
+        <li><a href="#">课时管理</a></li>
+        <li><a href="#">课时列表</a></li>
+    </ol>
+    <div class="row">
+        <div class="col-md-1 col-md-offset-10" cs_id={{result.cs_id}}>
+            <button class="btn btn-success btn-add">添加课时</button>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">课程基本信息</div>
+        <div class="panel-body">
+            <div class="media">
+                <div class="media-left">
+                <a href="#">
+                    {{if(result.cs_cover=='')}}
+                <img class="media-object" src="imgs/course.png" width="240px" height="120px">
+                    {{else}}
+                <img class="media-object" src="{{result.cs_cover}}" width="240px" height="120px">
+                    {{/if}}
+                </a>
+                </div>
+                <div class="media-body">
+                    <h4 class="media-heading">课程名称:{{result.cs_name}}</h4>
+                    <h4 class="media-heading">讲师名称:{{result.tc_name}}</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">课时信息</div>
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>编码</th>
+                    <th>名称</th>
+                    <th>时长</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{each result.lessons v}}
+                <tr>
+                    <td>{{v.ct_id}}</td>
+                    <td>{{v.ct_name}}</td>
+                    <td>{{v.ct_video_duration}}</td>
+                    <td>
+                        <button class="btn btn-primary">编辑</button>
+                    </td>
+                </tr>
+                {{/each}}
+            </tbody>
+
+        </table>
+
+
+    </div>
+</div>

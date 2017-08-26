@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./assets/uploadify/uploadify.css">
+    <title>Document</title>
+</head>
+<body>
+    <input type="file" value="上传文件" id="file_upload_1">
+</body>
+</html>
+<script src="./js/lib/jquery-2.1.4.js"></script>
+<script src="./assets/uploadify/jquery.uploadify.js"></script>
+<script>
+    $('#file_upload_1').uploadify({
+        auto:true,
+        // buttonImage:'./imgs/course.png',
+        swf:"./assets/uploadify/uploadify.swf",
+        height:200,
+        width:200,
+
+    })
+</script>
